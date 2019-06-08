@@ -25,7 +25,7 @@ const corsOptions = {
 
 app.options('/', cors(corsOptions));
 
-app.post('/', cors(corsOptions), (req, res) => {
+app.post('/', cors(corsOptions), (req, res, next) => {
   const msg = req.body;
   const cookies = Array.isArray(msg) ? msg : [msg];
   const hasSet = [];
@@ -42,8 +42,11 @@ app.post('/', cors(corsOptions), (req, res) => {
 });
 
 const PORT = process.env.PORT || '8080';
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-});
+/* istanbul ignore next */
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}`);
+  });
+}
 
 module.exports = app;
