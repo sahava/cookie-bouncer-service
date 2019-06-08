@@ -16,7 +16,7 @@ const corsOptions = {
     if (allowedHosts.indexOf(origin) > -1) {
       cb(null, true);
     } else {
-      cb(new Error('CORS error!'));
+      cb(new Error(`CORS error! Attempt to reach API from ${origin}`));
     }
   },
   methods: 'POST',
