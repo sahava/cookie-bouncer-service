@@ -4,13 +4,16 @@
   "description": "GA CNAME cookie rewrite for Google Cloud Functions",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "jest --coverage --detectOpenHandles"
   },
   "author": "Simo Ahava",
   "license": "MIT",
   "dependencies": {
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2"
   }
 }
