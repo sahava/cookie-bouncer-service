@@ -6,9 +6,9 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 
-// Add all the hosts that have been mapped to the endpoint
+// Add all the hosts that will make requests to the service
 const allowedHosts = [
-  'https://www.simoahava.com'
+  'https://www.mydomain.com'
 ];
 
 const corsOptions = {
