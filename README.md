@@ -10,4 +10,6 @@ The point of the web service is to offer an API that sets cookies in the `Set-Co
 However, you can set up a [custom domain mapping](https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains) to the Google App Engine endpoint, which effectively lets you service this API in your own domain namespace. Thus any cookies sent with the `Set-Cookie` header are treated as first-party cookies by the browser.
 
 # Instructions
-Coming soon...
+Guide: https://www.simoahava.com/google-cloud/create-cookie-rewrite-web-service-google-cloud/
+
+Video: https://youtu.be/cmRrSeR51tc
